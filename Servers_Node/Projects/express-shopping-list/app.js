@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
 //get all items
 app.get('/items', (req, res) => {
     console.log("GET /items route");
+    //if array is empty, display empty message
     if (items.length === 0) return res.json({ message: "Cart is empty" });
     return res.json(items);
 });
