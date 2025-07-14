@@ -21,7 +21,14 @@ app.get('/items', (req, res) => {
     return res.json(items);
 });
 
-
+// post items
+app.post('/items', (req, res) => {
+    console.log("POST /items route");
+    const { name, price } = req.body;
+    const newItem = req.body;
+    items.push(newItem);
+    return res.json({ added: newItem });
+})
 
 
 
